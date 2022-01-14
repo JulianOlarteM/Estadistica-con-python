@@ -1,0 +1,215 @@
+Introduccion
+
+    Programaicon Dinamica:  es una de las tecnicas mas poderosas para 
+                            optimizar diferentes tipos de problemas.
+    
+        Subestructura Optima : Una solucon global optrima se puede
+        encontrar al cmbiar solucines optimas de subproblemas locales
+
+        Suproblemas empalmados: Una solucion optima que involucra resolver 
+        el mismo problema en varias ocaciones. 
+
+    Memorization (Memorizacion)
+
+        * La memorizacion es una tecnica para guardar computos previso y evitar relizarlos
+          nuevamente.
+   
+        * Normalmente se utiliza un diccionario, donde las consultas se pueden hacer en O(1)
+
+Caminos Aleatorios:
+
+    * Es un tipo de simulacion que elige aleatoriamente una decicion dentro de un conjunto de 
+      deciciones validas
+
+    * Se utiliza en muchos campos del conocimiento cuando los sistems no son deterministas e incluyen
+      elementos de aleatoriedad.
+
+Introduccion a la preogramacion estocastica:
+
+    Un programa es deterministico si cuando se corre con el mismo imput se produce 
+    el mismo output
+
+    Los programas deterministicos son muy importantes , pero exiisten problemas
+    que no pueden resolverse de esa manera.
+
+    La programacion estocastica permite introducir aleatoriedad a nuestros programas
+    para crear simulaciones que permiten resolver otro tipo de problemas.
+
+    Los programas estocasticos se aprovechan de las distribucuiiones probabilisticas de un problema, 
+    se conocen o pueden ser estimadas.
+
+Probabilidades :
+
+  La probabailidad es una medida de la certidumbre esociada a un ecento o suceso futuro y
+  suele expresarse como un numero entre 0 y 1.
+
+  Una probabilidad de 0 significa que un seceso jamas sucedera.
+
+  Una probabilidad de que un evento suceda y de que no suceda siempre nos debe sumar 1. 
+
+    ley complemento:
+
+      P(A) + P(~A) = 1       #La probabilidad de A mas las probabailidad de No A es 1)
+
+    Ley Multiplicatica:  
+     Cual es la probalidad de que un evento suceda y otro evetno tambien suceda) 
+
+        P(A y B) = p(A) * P(B)    
+      
+      Siempre la probabilidad de que ambas sucedan es menor que laprobabilidad de una sola de las posibilidades. 
+
+   Ley aditiva:
+    Cual es la probalidad de que A suceda o B suceda.
+     
+     Casos mutuamente exclusivos: 
+     ej: Cual es la probalidad de que yo valla a comer o valla a ir al supermercado.
+     
+        P(A o B)=P(A) + P(B)
+       
+
+    Casos no exclusivos
+    ej: Cual es la probabilidad que amanesca y que este programando.
+
+
+        (A o B)=P(A) + P(B) - P(A y B)   
+
+  Teniendo en cuenta o anteiror se realizara un ejemplo del dado:
+  
+  - Sabemos que solo exiten 6 posibilidades.
+      [1] [2] [3] [4] [5] [6]
+
+    Probalidad de que salga 1:
+
+     P(dado=1) = 1/6 
+
+    Probabilidad de que salga 1 o 2:
+
+      p(dado=1 o dado=2)= 1/6 + 1/6 = 1/3
+
+    Probabilidad de no obtener un 1:
+
+      P(A) + P(~A) = 1
+       
+      P(~A) = 1 - P(A)
+
+      P(~A) = 1 - 1/6 = 5/6
+
+    Cual es la probavilidad de no obtener un 1 en por lo menos 6 tiros?
+
+      P(A y B) = p(A) * P(B) 
+      P(no obtener 1 en 6 tiros)= 5/6 * 5/6 * 5/6 * 5/6 * 5/6 * 5/6
+      
+      p(no obtener 1 en 6 tiros)= (5/6)**6 = 0.33
+
+Inferencia Estadistica:
+
+  * Con las siulaciones podeos calcular las probabilidades de eventos complejos 
+    sabiendo las probabilidades de eventos simples.
+
+  * ¿Que pasa cuando no sabemos las probabilidades de eventos simples?
+
+  * Las tecnicas de Inferencia Estadistica nos permiten inferir/concluir las propiedades
+    de una pobacion a partir de una muestra aleatoria. 
+  
+  El principio guia de la Inferencia Estadistica es que una muestra aleatoria tiende 
+  a exhibir las mismas propiedades que la pobacion de la  cual fue extraida. 
+
+  Proceso: Sacamos una muestra de una probalcion que sea representativa y aleatoria, una ves tenemos muestra, podemos 
+           obtener concuisones de la poblacion en general. 
+  
+  LEY DE LOS GRANDES NUMEROS:
+       
+       En pruebas independientes repetidas con la misma probabilidad p de un resultado,
+       la fraccion de desviaciones de p converge a cero conforme la cantidad de pruebas 
+       se acerca a infinito. 
+
+    Falacia del apostador:
+
+      La falacia del apostador dice que despues de un evento extremo, ocurriran eventos menos
+      extremos para nivelar la media. (Esto no ocurre porque cada evento es independiente)
+
+      La regresion a la media señala que despues de un evento aleatorio extremo, el siguiente 
+      evento probablemente sera menos exgtremo. 
+
+Media 
+
+  * Es una medida de tencencia central
+  * Comunmente es conocida como promedio
+
+Varianza
+
+  * La varianza mide que tan propagados se encuentran un conjunto de valores
+    aleatorios de su media.
+
+  * Mientras que la media nos da una idea de donde se encuentran los valores. La
+    varianza nos dice que tan dispersos se encuentran.
+
+  * La varianza siempre debe entenderce con respecto a la media. Sus unidades estan eevadas al cuadrado
+
+Desviacion estandar
+
+  * La desviacion estandar es la raiz cuadrada de la varianza.
+
+  * Nos permite entender, tambien, a propagacion y se debe entender siempre 
+    relacionando a la media.
+
+  * La ventaja sobre la varianza es que la desviacion estandar esta en las mismas unidades que la media.
+
+Distribución Normal
+
+  * Es una de las distribuciones mas recurrentes en cualquier ambito
+
+  * Se define completamente por su media y su desviacion estandar.
+
+  * Permite calcular intervalos_de_confianza/probabilidades con la regla empirica.  
+
+  Regla empirica
+      
+      * Tambien conocida como la regla 68 - 95 - 99.7
+
+      * Señala cual es la dispersion de los datos en una distribucionn
+        nomal a uno , dos , y tres sigmas/desviacion_estandar.
+
+      * Permite calcular probabilidades con la densidad de la  de la distribucion normal.
+
+Simulaciones de Montecarlo:
+
+  * Permite crer simulacines con aleatoriedad para predecir el resultado de un problema.
+
+  * Permite convertir problemas deterministicos en problemas estocasticos.
+
+  * Es utilizado en una gran diversodad de areas, desde la ingenieria hsta la biologia y el derecho.
+
+
+
+
+
+
+
+
+  
+      
+
+
+
+      
+
+  
+  
+    
+  
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
